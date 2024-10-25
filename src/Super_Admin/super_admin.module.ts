@@ -1,7 +1,7 @@
 
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { SuperAdminService } from './super_admin.service'; // The Admin entity
+import { SuperAdminService } from './super_admin.service'; 
 import { employee } from '../Entity/employee'
 import { admin } from '../Entity/adminEntity';
 import { AdminModule } from 'src/admin/admin.module';

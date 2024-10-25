@@ -70,7 +70,7 @@ export class SuperAdminController {
   }
 
   @UseGuards(AuthGuard)
-  @Put('delete_user/:id')
+  @Put('inactive_user/:id')
   async delete(@Param('id') id: string, @Body() createUserDto: createEmpDto, @Res() res: Response, @Req() request: Request) {
     const payload = request['user']
     if (payload.role != 'Super Admin') {

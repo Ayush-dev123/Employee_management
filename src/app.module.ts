@@ -22,6 +22,7 @@ import { super_admin_table } from './Entity/superadminEntity';
 import { CommonController } from './common/common.controller';
 import { CommonService } from './common/common.service';
 import { CommonModule } from './common/common.module';
+import { RedisModule } from './Redis/redis.module'
 
 
 @Module({
@@ -35,7 +36,7 @@ import { CommonModule } from './common/common.module';
     database: 'employee_management', 
     synchronize: true,
     entities: [admin,employee,EmployeeDetail,super_admin_table], 
-  }),AdminModule,EmployeeModule,SuperAdminModule, AuthModule, CommonModule ],
+  }),AdminModule,EmployeeModule,SuperAdminModule, AuthModule, CommonModule,RedisModule ],
   controllers: [AppController],
   providers: [AppService],
 })
